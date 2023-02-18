@@ -1,16 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import InputField from "./components/InputField";
 
-let name: string;
-let age: number;
 
-name = 'Kasey'
-age = 44
-
-function App() {
+//React.FC means function component type
+//React.ReactNode supports all of the types
+const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>{name} is {age} years old!</h1>
+      <span className="heading">Practice List</span>
+      <InputField />
+      
     </div>
   );
 }
