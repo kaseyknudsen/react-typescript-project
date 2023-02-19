@@ -1,13 +1,19 @@
-import { FormControl, InputLabel, OutlinedInput, Button } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  OutlinedInput,
+  Button,
+} from "@mui/material";
 import "./styles.scss";
 
 interface Props {
   todo: string;
   // this is copied from hovering over the setToDo type
   setToDo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: (e: React.FormEvent) => void;
 }
 
-const InputField = ({ todo, setToDo }: Props) => {
+const InputField = ({ todo, setToDo, handleAdd }: Props) => {
   //OR like this... const InputField: React.FC<Props> ({ todo, setToDo }) => {
   return (
     <>
@@ -17,14 +23,15 @@ const InputField = ({ todo, setToDo }: Props) => {
           id="task"
           // defaultValue="Enter Task Here"
           label="Task"
-          className="input_box"
           value={todo}
-          onChange={(e)=>setToDo(e.target.value)}
+          type="input"
+          onChange={(e) => setToDo(e.target.value)}
         />
         <Button
-          className="input_submit"
+          onClick={handleAdd}
           variant="contained"
           size="small"
+          type="submit"
           style={{ marginTop: "10px" }}
         >
           Go
