@@ -24,7 +24,7 @@ const SingleToDo = ({todo, toDoList, setToDoList}: Props) => {
 //   <FormControl>
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>
-        <Typography>This is a card</Typography>
+        <Typography>{todo.todo}</Typography>
       </CardContent>
     </Card>
     // </FormControl>
