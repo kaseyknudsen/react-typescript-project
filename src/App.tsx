@@ -33,7 +33,7 @@ const App: React.FC = () => {
       {/* {toDoList.map((element) => (<li>{element.todo}</li>))} */}
       <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
       {/* <ToDoList /> */}
-      <SingleToDo />
+      
       
     </div>
   );
