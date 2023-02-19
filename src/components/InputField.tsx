@@ -1,9 +1,4 @@
-import {
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-  Button,
-} from "@mui/material";
+import { FormControl, InputLabel, OutlinedInput, Button } from "@mui/material";
 import "./styles.scss";
 
 interface Props {
@@ -27,16 +22,16 @@ const InputField = ({ todo, setToDo, handleAdd }: Props) => {
           type="input"
           onChange={(e) => setToDo(e.target.value)}
         />
-        <Button
-          onClick={handleAdd}
-          variant="contained"
-          size="small"
-          type="submit"
-          style={{ marginTop: "10px" }}
-        >
-          Go
-        </Button>
       </FormControl>
+      <Button
+        onClick={handleAdd}
+        variant="contained"
+        size="small"
+        type="submit"
+        sx={{ marginTop: "5px" }}
+      >
+        Go
+      </Button>
     </>
   );
 };

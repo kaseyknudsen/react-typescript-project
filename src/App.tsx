@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Todo } from "./components/model";
 import ToDoList from "./components/ToDoList";
 import SingleToDo from "./components/SingleToDo";
+import InputField2 from "./components/InputField2";
+import { Box } from "@mui/material";
 //React.FC means function component type
 //React.ReactNode supports all of the types
 const App: React.FC = () => {
@@ -27,15 +29,15 @@ const App: React.FC = () => {
 
   console.log(toDoList)
   return (
-    <div className="App">
+    <Box className="App">
       <span className="heading">Practice List</span>
       <InputField todo={todo} setToDo={setToDo} handleAdd={handleAdd}/>
       {/* {toDoList.map((element) => (<li>{element.todo}</li>))} */}
       <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
       {/* <ToDoList /> */}
+      <InputField2 />
       
-      
-    </div>
+    </Box>
   );
 }
 
