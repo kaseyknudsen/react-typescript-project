@@ -8,14 +8,14 @@ $color-dark: #31473A;
   background-color: $color-light;
   width: 100vw;
   height: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 3em;
   text-align: center;
-  box-sizing: border-box;
+//   box-sizing: border-box;
 }
 
 .heading {
@@ -24,9 +24,9 @@ $color-dark: #31473A;
   text-align: center;
 }
 
-@media (max-width: 800px) {
-  .heading {
-    margin: 15px 0;
-    font-size: 35px;
-  }
-}
+// @media (max-width: 800px) {
+//   .heading {
+//     margin: 15px 0;
+//     font-size: 35px;
+//   }
+// }

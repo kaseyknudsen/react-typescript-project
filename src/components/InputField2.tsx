@@ -9,13 +9,14 @@ interface Props {
 export const InputField2 = ({todo, setToDo, handleAdd2}: Props) => {
   return (
     <>
-    <FormControl margin='normal' sx={{marginTop: '100px'}}>
+    <FormControl margin='normal'>
         <InputLabel htmlFor="task">Task</InputLabel>
         <OutlinedInput
         id="task" 
         value={todo}
         label="Task"
         onChange={(e) => setToDo(e.target.value)}
+        sx={{marginRight: '8px'}}
         />
     </FormControl>
     <Button 

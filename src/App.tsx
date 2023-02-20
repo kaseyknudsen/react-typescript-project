@@ -6,7 +6,7 @@ import { Todo } from "./components/model";
 import ToDoList from "./components/ToDoList";
 import SingleToDo from "./components/SingleToDo";
 import InputField2 from "./components/InputField2";
-import { Box } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 //React.FC means function component type
 //React.ReactNode supports all of the types
 const App: React.FC = () => {
@@ -39,15 +39,24 @@ const App: React.FC = () => {
 
   console.log(toDoList)
   return (
-    <Box className="App">
-      <span className="heading">Practice List</span>
-      <InputField todo={todo} setToDo={setToDo} handleAdd={handleAdd}/>
+    <Container className="App" maxWidth="xl">
+      <Grid>
+        <Grid item xs={12}>
+          <span className="heading">Practice List</span>
+        </Grid>
+        <Grid item>
+          <InputField todo={todo} setToDo={setToDo} handleAdd={handleAdd}/>
+        </Grid>
       {/* {toDoList.map((element) => (<li>{element.todo}</li>))} */}
-      <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
       {/* <ToDoList /> */}
-      <InputField2 todo={todo2} setToDo={setToDo2} handleAdd2={handleAdd2} />
-      
-    </Box>
+        <Grid item>
+          <InputField2 todo={todo2} setToDo={setToDo2} handleAdd2={handleAdd2} />
+        </Grid>
+        <Grid item>
+          <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
